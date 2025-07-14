@@ -44,7 +44,7 @@ console.log(typeof person); // "object"
 // Array - ordered list (a type of object)
 let colors = ["red", "green", "blue"];
 console.log(typeof colors); // "object"
-console.log(Array.isArray(colors)); // true
+console.log(Array.isArray(colors)); // (true) The Array.isArray() method is used to check whether a value is an array or not. 
 
 // Function - a callable object
 function greet() {
