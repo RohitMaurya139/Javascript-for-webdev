@@ -1,33 +1,39 @@
-const username = prompt('Please Enter Your Name.');
-const userAge = parseInt(prompt('Please Enter Your Age.'));
+// 📌 Conditional Statements: if, else if, else in JavaScript
 
-debugger
-console.log(`Name: ${username}`);
-console.log(`Age: ${userAge}`);
+// ✅ 1. Basic if Statement
+// Executes block only if condition is true
+let age = 20;
 
-if (userAge >= 0 && userAge <= 4) {
-    console.log(`${username} is a kid.`);
-    console.log('And he/she is playing.');
+if (age >= 18) {
+  console.log("✅ You are eligible to vote."); // ➤ This will run
 }
 
-if (userAge >= 5 && userAge <= 17) {
-    console.log(`${username} is a school student.`);
-    console.log('And he/she is learning science and maths.');
+// ✅ 2. if...else Statement
+// if block runs if condition is true; else block runs otherwise
+let isRaining = true;
+
+if (isRaining) {
+  console.log("🌧️ Take an umbrella.");
+} else {
+  console.log("☀️ Enjoy the sunshine.");
 }
 
-if (userAge >= 18 && userAge <= 24) {
-    console.log(`${username} is a college student.`);
-    console.log('And he/she is learning computer science.');
+
+// ✅ 3. Using logical operators with if
+let hasEmail = true;
+let hasPassword = false;
+
+if (hasEmail && hasPassword) {
+  console.log("🔓 Login successful");
+} else {
+  console.log("❌ Email or password missing"); // ➤ This will run
 }
 
-if (userAge >= 25 && userAge <= 45) {
-    console.log(`${username} is a working professional.`);
-    console.log('And he/she is a web developer.');
-}
+// ✅ 4. if condition with a variable check
+let user = "";
 
-if (userAge > 45) {
-    console.log(`${username} is retired.`);
-    console.log('And he/she reads newspaper.');
+if (user) {
+  console.log("👋 Hello, " + user);
+} else {
+  console.log("🙋 Please enter your name"); // ➤ user is falsy (empty string)
 }
-
-console.log('Program Ended!!');

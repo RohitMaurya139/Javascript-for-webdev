@@ -1,117 +1,89 @@
-// const username = 'Anurag'
-// const userAge = 24
+// 📌 JavaScript switch...case Statement
+// Used to perform different actions based on different conditions.
+// It’s a cleaner alternative to many else-if statements.
 
-// if (dayNumber === 0) {
-//   console.log('It is Sunday Today')
-// } else if (dayNumber === 1) {
-//   console.log('It is Monday Today')
-// } else if (dayNumber === 2) {
-//   console.log('It is Tuesday Today')
-// } else if (dayNumber === 3) {
-//   console.log('It is Wednesday Today')
-// } else if (dayNumber === 4) {
-//   console.log('It is Thursday Today')
-// } else if (dayNumber === 5) {
-//   console.log('It is Friday Today')
-// } else if (dayNumber === 6) {
-//   console.log('It is Saturday Today')
-// } else {
-//   console.log('Please Enter a Valid Day Number')
-// }
+// ✅ 1. Basic Syntax
 
-// const dayNumber = 14
+let day = 3;
 
-// switch (dayNumber) {
-//   case 0:
-//     console.log('It is Sunday Today')
-//     break
-//   case 1:
-//     console.log('It is Monday Today')
-//     break
-//   case 2:
-//     console.log('It is Tuesday Today')
-//     break
-//   case 3:
-//     console.log('It is Wednesday Today')
-//     break
-//   case 4:
-//     console.log('It is Thursday Today')
-//     break
-//   case 5:
-//     console.log('It is Friday Today')
-//     break
-//   case 6:
-//     console.log('It is Saturday Today')
-//     break
-//   default:
-//     console.log('Please Enter a Valid Day Number')
-// }
-
-// debugger
-
-// switch(true) {
-//     case userAge >= 0 && userAge <= 4:
-//         console.log(`${username} is a kid.`)
-//         break
-//     case (userAge >= 5 && userAge <= 17):
-//         console.log(`${username} is a school student.`)
-//         break
-//     case (userAge >= 18 && userAge <= 24):
-//         console.log(`${username} is a college student.`)
-//         break
-//     case true:
-//         console.log(`${username} is a working professional.`)
-//         break
-//     case (userAge > 45 && userAge < 121):
-//         console.log(`${username} is retired.`)
-//         break
-//     default:
-//         console.log('Please Enter a Valid Age');
-// }
-
-// if (userAge >= 0 && userAge <= 4) {
-//     console.log(`${username} is a kid.`);
-//     console.log('And he/she is playing.');
-// } else if (userAge >= 5 && userAge <= 17) {
-//     console.log(`${username} is a school student.`);
-//     console.log('And he/she is learning science and maths.');
-// } else if (userAge >= 18 && userAge <= 24) {
-//     console.log(`${username} is a college student.`);
-//     console.log('And he/she is learning computer science.');
-// } else if (userAge >= 25 && userAge <= 45) {
-//     console.log(`${username} is a working professional.`);
-//     console.log('And he/she is a web developer.');
-// } else if (userAge > 45 && userAge < 121) {
-//     console.log(`${username} is retired.`);
-//     console.log('And he/she reads newspaper.');
-// } else if (userAge >= 121) {
-//     console.log(`${username} is immortal.`);
-//     console.log('And he/she reads newspaper.');
-// } else {
-//     console.log('Please Enter a Valid Age');
-// }
-
-const grade = 'A'
-
-debugger
-switch (grade.toLocaleLowerCase()) {
-  case 'a':
-    console.log('Your score is between 85% to 100%.')
-    break
+switch (day) {
   case 1:
-    console.log('Your score is between 75% to 85%')
-    break
-  case 'c':
-    console.log('Your score is between 60% to 75%')
-    break
-  case false:
-    console.log('Your score is between 50% to 60%')
-    break
-  case 'e':
-    console.log('Your score is between 30% to 50%')
-    break
+    console.log("📅 Monday");
+    break;
+  case 2:
+    console.log("📅 Tuesday");
+    break;
+  case 3:
+    console.log("📅 Wednesday"); // ➤ This will run
+    break;
+  case 4:
+    console.log("📅 Thursday");
+    break;
+  case 5:
+    console.log("📅 Friday");
+    break;
   default:
-    console.log('Sorry, you failed.')
+    console.log("❓ Invalid day"); // ➤ Runs if no case matches
 }
 
-console.log('Program Ended!')
+// ✅ 2. Using string values in switch
+let fruit = "apple";
+
+switch (fruit) {
+  case "banana":
+    console.log("🍌 Banana is selected");
+    break;
+  case "apple":
+    console.log("🍎 Apple is selected"); // ➤ This will run
+    break;
+  case "orange":
+    console.log("🍊 Orange is selected");
+    break;
+  default:
+    console.log("❌ Unknown fruit");
+}
+
+// ✅ 3. Grouping multiple cases (fall-through)
+let grade = "B";
+
+switch (grade) {
+  case "A":
+  case "B":
+  case "C":
+    console.log("✅ Passed"); // ➤ This will run for A, B, or C
+    break;
+  case "D":
+  case "F":
+    console.log("❌ Failed");
+    break;
+  default:
+    console.log("Invalid grade");
+}
+
+// ✅ 4. switch vs if-else: A real-world login role example
+let role = "admin";
+
+switch (role) {
+  case "admin":
+    console.log("🔐 Access to admin panel");
+    break;
+  case "user":
+    console.log("👤 Access to user dashboard");
+    break;
+  case "guest":
+    console.log("👀 View-only access");
+    break;
+  default:
+    console.log("🚫 Unknown role");
+}
+
+/* 
+| Keyword        | Description                                        |
+| -------------- | -------------------------------------------------- |
+| `switch`       | Starts the switch statement                        |
+| `case`         | Each value to compare with the `switch` expression |
+| `break`        | Stops checking further cases if a match is found   |
+| `default`      | Executes if no matching case is found              |
+| `fall-through` | If you skip `break`, it continues to the next case |
+
+*/
